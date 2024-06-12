@@ -1,8 +1,9 @@
 const express = require('express');
 const path = require('path');
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 const app = express();
-const { notesController }  = require('./controllers/index');
+const { notesController } = require('./controllers/index');
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
